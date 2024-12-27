@@ -373,20 +373,25 @@ async function init()
     switch(global.currentPage)
     {
         case('/index.html'):
+        case('/index'):
         case('/'):
             displaySlider();
             displayPopularMovies();
             break;
         case('/shows.html'):
+        case('/shows'):
             displayPopularShows();
             break;
         case('/movie-details.html'):
+        case('/movie-details'):
             displayMovieDetails();
             break;
         case('/tv-details.html'):
+        case('/tv-details'):
             displayShowDetails();
             break;
         case('/search.html'):
+        case('/search'):
             search();
             break;
     }   
