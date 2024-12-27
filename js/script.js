@@ -34,7 +34,7 @@ async function displayPopularMovies()
         movieDiv.classList.add('card');
         movieDiv.innerHTML = `<a href="movie-details.html?id=${movie.id}">
         ${movie.poster_path ? `<img src="https://image.tmdb.org/t/p/w500${movie.poster_path}"class="card-img-top"alt="${movie.title}"/>`
-        : `<img src="../images/no-image.jpg" class="card-img-top"alt="${movie.title}"/>`}</a>
+        : `<img src="./images/no-image.jpg" class="card-img-top"alt="${movie.title}"/>`}</a>
           <div class="card-body"><h5 class="card-title">${movie.title}</h5>
           <p class="card-text"><small class="text-muted">Release: ${movie.release_date}
           </small></p></div>`;
@@ -46,13 +46,14 @@ async function displayPopularShows()
 {
     const result = await fetchAPIData('tv/popular');
     //const {results} = await fetchAPIData('tv/popular');// this will give me immdedly result.results in results varible
+
     result.results.forEach((show) =>
     {
         const div = document.createElement('div');
         div.classList.add('card');
         div.innerHTML = `<a href="tv-details.html?id=${show.id}">
         ${show.poster_path ? `<img src="https://image.tmdb.org/t/p/w500${show.poster_path}"class="card-img-top"alt="${show.name}"/>`
-        : `<img src="../images/no-image.jpg" class="card-img-top"alt="${show.name}"/>`}</a>
+        : `<img src="./images/no-image.jpg" class="card-img-top"alt="${show.name}"/>`}</a>
         <p class="card-text"><small class="text-muted">Air date: ${show.first_air_date}
         <div class="card-body"><h5 class="card-title">${show.name}</h5>
           </small></p></div>`;
