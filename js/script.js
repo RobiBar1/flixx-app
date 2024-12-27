@@ -73,7 +73,7 @@ function displaySerchResults(results)
             movieDiv.innerHTML = `<a href="${global.search.type}-details.html?id=${result.id}">
             ${result.poster_path ? `<img src="https://image.tmdb.org/t/p/w500${result.poster_path}"class="card-img-top"
             alt="${global.search.type === 'movie' ? result.title : result.name}"/>`
-            : `<img src="../images/no-image.jpg" class="card-img-top"
+            : `<img src="./images/no-image.jpg" class="card-img-top"
             alt="${global.search.type === 'movie' ? result.title : result.name}"/>`}</a>
               <div class="card-body">
               <h5 class="card-title">${global.search.type === 'movie' ? result.title : result.name}</h5>
@@ -109,7 +109,7 @@ async function displayMovieDetails()
     <div class="details-top">
           <div>
             ${movie.poster_path ? `<img src="https://image.tmdb.org/t/p/w500${movie.poster_path}"class="card-img-top"alt="${movie.title}"/>`
-            : `<img src="../images/no-image.jpg" class="card-img-top"alt="${movie.title}"/>`}
+            : `<img src="./images/no-image.jpg" class="card-img-top"alt="${movie.title}"/>`}
           </div>
           <div>
             <h2>${movie.title}</h2>
@@ -162,7 +162,7 @@ async function displayShowDetails()
     <div class="details-top">
     <div>
     ${show.poster_path ? `<img src="https://image.tmdb.org/t/p/w500${show.poster_path}"class="card-img-top"alt="${show.name}"/>`
-    : `<img src="../images/no-image.jpg" class="card-img-top"alt="${show.name}"/>`}
+    : `<img src="./images/no-image.jpg" class="card-img-top"alt="${show.name}"/>`}
     </div>
     <div>
     <h2>${show.name}</h2>
